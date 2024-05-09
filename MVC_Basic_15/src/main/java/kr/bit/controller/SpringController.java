@@ -1,98 +1,49 @@
 package kr.bit.controller;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.servlet.ModelAndView;
 
 import kr.bit.beans.Data;
+import kr.bit.beans.Data2;
+import kr.bit.beans.Data3;
 
 @Controller
-@SessionAttributes({"sbean","sbean2"}) // ModelAttribute로 주입시, Session으로 영역 지정하면 Session으로 변
 public class SpringController {
 
-	// 주의할점 @ModelAttribute를 활용해 객체를 생성해 변환되는 메서드 작성해줘야지 Session 영역으로 변
-	@ModelAttribute("sbean")
-	public Data dbean() {
-		return new Data();
-	}
-	
-	@ModelAttribute("sbean2")
-	public Data dbean2() {
-		return new Data();
-	}
-	
-	@GetMapping("/t5") // request 영역에 저장
-	public String t5(@ModelAttribute("sbean") Data dbean, @ModelAttribute("sbean2") Data dbean2) {
+	@Autowired
+	Data data1; // RootAppContext에 빈으로 등록한 Data 주소값을 자동주입받고 있
 
-		dbean.setStr1("aa");
-		dbean.setStr2("bb");
+	@Resource(name = "session2")
+	Data2 data2;
 
-		dbean2.setStr1("cc");
-		dbean2.setStr2("dd");
+	@Autowired
+	Data3 data3;
 
-		return "test5";
-
-	}
-	
-	@GetMapping("/s5")
-	public String s5(@ModelAttribute("sbean") Data dbean, @ModelAttribute("sbean2") Data dbean2) {
-		return "spring5";
-	}
-	
 	@GetMapping("/t1")
-	public String t1(HttpSession session) {
+	public String t1() {
+		data1.setStr1("aa");
+		data1.setStr1("bb");
 
-		session.setAttribute("data1", "spring1");
+		data2.setStr3("cc");
+		data2.setStr4("dd");
+
+		data3.setStr5("ee");
+		data3.setStr5("ff"); // 값 주입한 객체들이 SessionScope임 => t1경로 매핑될 때 Bean 객체 주
 
 		return "test1";
-
-	}
-
-	@GetMapping("/t2")
-	public String t2(HttpSession session) {
-		session.setAttribute("data1", "spring2");
-		return "redirect:/s1";
 	}
 
 	@GetMapping("/s1")
-	public String s1(HttpSession session) {
-		String str = (String) session.getAttribute("data1");
-		System.out.println(str);
+	public String s1(Model model) { // 세션 객체들 data1,2,3을 객체 모델 객체에 담
+
+		model.addAttribute("data1", data1);
+		model.addAttribute("data2", data2);
+		model.addAttribute("data3", data3);
+
 		return "spring1";
 	}
-
-	@GetMapping("/t3")
-	public String t3(HttpSession session) {
-		session.setAttribute("data1", "spring3");
-		return "forward:/s1";
-	}
-
-	@GetMapping("/t4")
-	public String t4(HttpSession session) {
-		Data data = new Data();
-
-		data.setStr1("spring4");
-		data.setStr2("spring5"); // 객체에 값 저장
-
-		session.setAttribute("bean", data); // 세션영역에 저장
-
-		return "test4";
-	}
-
-	@GetMapping("/s4") // session에 저장되어 있는 객체를 사용하고자 할때
-	public String s4(@SessionAttribute("bean") Data d) {
-		return "spring4";
-	}
-
-	
-
 }

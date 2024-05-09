@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-${sessionScope.data1 }
+	%{requestScope.data1.str1}
+	%{requestScope.data1.str2} <br>
+	
+	%{requestScope.data2.str3}
+	%{requestScope.data2.str4} <br>
+
+	%{requestScope.data3.str5}
+	%{requestScope.data3.str6} <br>
+
 </body>
 </html>

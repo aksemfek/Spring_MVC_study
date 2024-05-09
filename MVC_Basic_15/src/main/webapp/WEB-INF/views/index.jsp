@@ -10,13 +10,7 @@
 		요청이 새롭게 발생해도 같은 메모리 공간을 사용하게 됨 -->
 	<!-- @SessionScope : 최초의 요청~브라우저 닫을때까지 -->
 	<a href="t1">test1</a><br>
-	<a href="t2">test2</a><br>
-	<a href="t3">test3</a><br>
 	<a href="s1">spting1</a> <br>
-	<a href="t4">test4</a><br>
-	<a href="s4">spting4</a> <br>
-	<a href="t5">test5</a><br>
-	<a href="s5">spting5</a> <br>
-	
+
 </body>
 </html>
