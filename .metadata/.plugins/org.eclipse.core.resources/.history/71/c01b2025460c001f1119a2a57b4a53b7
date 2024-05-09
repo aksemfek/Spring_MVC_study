@@ -1,0 +1,5 @@
+package kr.bit.config;
+
+public class SpringConfigcClass { // web.xml
+
+}

@@ -1,0 +1,33 @@
+package kr.bit.controller;
+
+import org.springframework.stereotype.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+import kr.bit.beans.Data;
+
+@Controller
+public class SpringController {
+
+	@GetMapping("/t1")
+	public String t1(Data bean) { // 경로매핑 후에 필드에 값을 세
+		bean.setName("길동");
+		bean.setId("aa");
+		bean.setPw("1234");
+		bean.setAdr1("seoul");
+		bean.setAdr2("gangnam");
+
+		return "test1";
+	}
+	
+	@GetMapping("/t2")
+	public String t2(Data bean) { // 경로매핑 후에 필드에 값을 세
+		bean.setName("관");
+		bean.setId("b");
+		bean.setPw("2345");
+		bean.setAdr1("seoul");
+		bean.setAdr2("seocho");
+
+		return "test2";
+	}
+}

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="spring1">spring1</a>
+	<a href="spring2">spring2</a>
+
+	<a href="sun1/spring3">sun1/spring3</a>
+	<a href="sun1/spring4">sun1/spring4</a>
+	<a href="sun2/spring5">sun2/spring5</a>
+	<a href="sun2/spring6">sun2/spring6</a>
+</body>
+</html>

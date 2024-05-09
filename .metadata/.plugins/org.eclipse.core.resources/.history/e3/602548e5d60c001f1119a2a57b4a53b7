@@ -1,0 +1,32 @@
+package kr.bit.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class SpringController {
+
+	@GetMapping("/t1")
+	public String t1(HttpServletRequest request) {
+
+		String d1 = request.getParameter("data1"); // 10
+		String d2 = request.getParameter("data2");
+		String d3[] = request.getParameterValues("data3");
+		
+		System.out.println(d1);
+		System.out.println(d2);
+		
+		for(String str:d3) {
+			System.out.println(str);
+		}
+		
+		return "final";
+
+	}
+
+}

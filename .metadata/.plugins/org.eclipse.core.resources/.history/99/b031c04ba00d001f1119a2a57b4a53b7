@@ -1,0 +1,42 @@
+package kr.bit.controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import kr.bit.beans.Data;
+
+@Controller
+public class SpringController {
+	
+	@GetMapping("/login")
+	public String t1(Model model) {
+		model.addAttribute("data", new Data());
+		return "login";
+	}
+
+	@PostMapping("/login")
+	public ModelAndView login(@ModelAttribute Data data) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("data", data);
+		mav.setViewName("loginResult");
+		return mav;
+	}
+	
+	@GetMapping("/loginResult")
+	public String loginResult(@RequestParam String id, @RequestParam String pw, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("pw", pw);
+		return "loginResult";
+	}
+	
+}
