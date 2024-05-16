@@ -21,7 +21,8 @@
 	<div class="container" style="margin-top: 100px">
 		<div class="card shadow">
 			<div class="card-body">
-				<form:form action="${root }board/write_pro" method="post">
+				<form:form action="${root }board/write_pro" method="post" modelAttribute="writeBean">
+				<form:hidden path="content_board_idx"/>
 					<div class="form-group">
 						<form:label path="content_subject">제목</form:label> 
 						<form:input class="form-control" path="content_subject" />
