@@ -30,12 +30,22 @@ public class UserController {
 	private User loginBean;  //로그인 여부확인하기위해 세션영역에 담아놓은거 자동주입받음
 
 	@GetMapping("/modify")
-	public String modify() {
+	public String modify(@ModelAttribute("modifyBean") User modifyBean) {
 		return "user/modify";
+	}
+	
+	@PostMapping("/modify_pro")
+	public String modify_pro(@ModelAttribute("modifyBean") User modifyBean,
+							BindingResult result) {
+		if (result.hasErrors()) {	
+			return "user/modify";
+		}
+		return "user/modify_success";
 	}
 
 	@GetMapping("/logout")
 	public String logout() {
+		loginBean.setUserLogin(false); // 로그인 되어있는 상태 아님
 		return "user/logout";
 	}
 
@@ -80,6 +90,11 @@ public class UserController {
 		userService.addUser(joinBean); // db에 삽입 (insert)
 
 		return "user/join_success";
+	}
+	
+	@GetMapping("/not_login")
+	public String not_login() {
+		return "user/not_login";
 	}
 
 	@InitBinder

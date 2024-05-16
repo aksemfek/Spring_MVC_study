@@ -11,16 +11,24 @@ public class UserDao {
 
 	@Autowired
 	private UserMapper userMapper;
-	
+
 	public String existId(String user_id) {
 		return userMapper.existId(user_id);
 	}
-	
+
 	public void addUser(User joinBean) {
 		userMapper.addUser(joinBean);
 	}
-	
+
 	public User getLoginUser(User loginProBean) {
 		return userMapper.getLoginUser(loginProBean);
+	}
+
+	public User getModifyUser(int user_idx) {
+		return userMapper.getModifyUser(user_idx);
+	}
+
+	public void modifyUser(User modifyBean) {
+		userMapper.modifyUser(modifyBean);
 	}
 }
