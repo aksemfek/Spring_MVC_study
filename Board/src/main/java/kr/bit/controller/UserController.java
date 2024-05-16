@@ -1,0 +1,91 @@
+package kr.bit.controller;
+
+import javax.annotation.Resource;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import kr.bit.beans.User;
+import kr.bit.service.UserService;
+import kr.bit.validator.UserValidator;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+	@Autowired
+	private UserService userService; // 컨트롤러 전후 단계 - 비즈니스로직 (service)
+	
+	@Resource(name="loginBean")
+	private User loginBean;  //로그인 여부확인하기위해 세션영역에 담아놓은거 자동주입받음
+
+	@GetMapping("/modify")
+	public String modify() {
+		return "user/modify";
+	}
+
+	@GetMapping("/logout")
+	public String logout() {
+		return "user/logout";
+	}
+
+	@GetMapping("/login")
+	public String login(@ModelAttribute("loginProBean") User loginProBean,
+			            @RequestParam(value="fail", defaultValue="false") boolean fail,
+			            Model model) {
+		
+		model.addAttribute("fail",fail);
+		
+		return "user/login";
+	}
+
+	@PostMapping("/login_pro")
+	public String login_pro(@Valid @ModelAttribute("loginProBean") User loginProBean, BindingResult result) {
+		if (result.hasErrors()) {
+			return "user/login";
+		}
+		
+		userService.getLoginUser(loginProBean);  //로그인 성공하면 user_idx, user_name추출
+		
+		if(loginBean.isUserLogin()==true) {
+			return "user/login_success";
+		}
+		else {
+			return "user/login_fail";
+		}
+	}
+
+	@GetMapping("/join")
+	public String join(@ModelAttribute("joinBean") User joinBean) { // 상단메뉴 - 회원가입
+		return "user/join";
+	}
+
+	@PostMapping("/join_pro") // join
+	public String join_pro(@Valid @ModelAttribute("joinBean") User joinBean, BindingResult result) {
+
+		if (result.hasErrors()) {
+			return "user/join";
+		} // 에러있음 원래 회원가입 폼
+
+		userService.addUser(joinBean); // db에 삽입 (insert)
+
+		return "user/join_success";
+	}
+
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+
+		UserValidator v1 = new UserValidator();
+		binder.addValidators(v1);
+	}
+}
