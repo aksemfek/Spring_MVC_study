@@ -17098,3 +17098,83 @@ Caused by: java.lang.Exception: File not found: /Users/jeonsangmin/Downloads/Boa
 2024-05-16 11:21:23,868 [Worker-277: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
 2024-05-16 11:21:23,869 [Worker-277: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2024-05-16 11:21:23,870 [Worker-277: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 11:42:15,996 [Worker-280: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:42:16,003 [Worker-280: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 11:42:16,006 [Worker-280: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:42:16,006 [Worker-280: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 11:51:52,705 [Worker-287: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:51:52,715 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 11:51:52,717 [Worker-287: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:51:52,718 [Worker-287: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 11:54:12,692 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:54:12,695 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 11:54:12,696 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:54:12,696 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 11:55:58,901 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:55:58,913 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 11:55:58,918 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:55:58,919 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 11:58:07,744 [Worker-291: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:58:07,753 [Worker-291: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 11:58:07,756 [Worker-291: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 11:58:07,756 [Worker-291: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:03:53,884 [Worker-295: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:03:53,891 [Worker-295: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:03:53,893 [Worker-295: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:03:53,894 [Worker-295: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:05:16,466 [Worker-297: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:05:16,475 [Worker-297: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:05:16,480 [Worker-297: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:05:16,481 [Worker-297: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:05:48,021 [Worker-299: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:05:48,022 [Worker-299: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:05:48,024 [Worker-299: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:05:48,024 [Worker-299: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:07:57,569 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:07:57,571 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:07:57,572 [Worker-290: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:07:57,573 [Worker-290: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:08:23,571 [Worker-299: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:08:23,576 [Worker-299: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:08:23,579 [Worker-299: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:08:23,579 [Worker-299: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:11:55,590 [Worker-302: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:11:55,596 [Worker-302: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:11:55,598 [Worker-302: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:11:55,598 [Worker-302: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:13:04,067 [Worker-303: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:13:04,069 [Worker-303: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:13:04,070 [Worker-303: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:13:04,070 [Worker-303: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:17:00,676 [Worker-309: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:17:00,686 [Worker-309: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:17:00,688 [Worker-309: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:17:00,688 [Worker-309: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:17:34,452 [Worker-310: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:17:34,453 [Worker-310: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:17:34,454 [Worker-310: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:17:34,454 [Worker-310: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:18:10,104 [Worker-310: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:18:10,106 [Worker-310: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:18:10,106 [Worker-310: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:18:10,107 [Worker-310: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:18:52,624 [Worker-307: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:18:52,625 [Worker-307: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:18:52,626 [Worker-307: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:18:52,626 [Worker-307: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:19:00,590 [Worker-301: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:19:00,595 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:19:00,597 [Worker-301: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:19:00,597 [Worker-301: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:20:21,962 [Worker-307: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:20:21,973 [Worker-307: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:20:21,976 [Worker-307: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:20:21,976 [Worker-307: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:35:03,674 [Worker-316: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:35:03,680 [Worker-316: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:35:03,682 [Worker-316: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:35:03,682 [Worker-316: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources
+2024-05-16 12:43:35,852 [Worker-319: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:43:35,858 [Worker-319: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/main/resources
+2024-05-16 12:43:35,860 [Worker-319: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-16 12:43:35,860 [Worker-319: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/EGOVEDU/eGovFrame-4.1.0/workspace.edu/Board/src/test/resources

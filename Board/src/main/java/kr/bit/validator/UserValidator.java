@@ -21,7 +21,7 @@ public class UserValidator implements Validator {
 		// join.jsp에서 폼에다 데이터 입력 -> modelAttributte로 User클래스의 필드에 데이터 값이 저장되어 있는 상태(값
 		// 주입한 상태)
 
-		if (beanName.equals("joinBean")) {
+		if (beanName.equals("joinBean") || beanName.equals("modifyBean")) {
 
 			if (user.getUser_pw().equals(user.getUser_pw2()) == false) {
 				errors.rejectValue("user_pw", "NotEqual");

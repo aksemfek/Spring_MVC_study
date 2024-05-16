@@ -25,21 +25,24 @@ public class UserController {
 
 	@Autowired
 	private UserService userService; // 컨트롤러 전후 단계 - 비즈니스로직 (service)
-	
-	@Resource(name="loginBean")
-	private User loginBean;  //로그인 여부확인하기위해 세션영역에 담아놓은거 자동주입받음
+
+	@Resource(name = "loginBean")
+	private User loginBean; // 로그인 여부확인하기위해 세션영역에 담아놓은거 자동주입받음
 
 	@GetMapping("/modify")
 	public String modify(@ModelAttribute("modifyBean") User modifyBean) {
+
+		userService.getModifyUser(modifyBean);
 		return "user/modify";
 	}
-	
+
 	@PostMapping("/modify_pro")
-	public String modify_pro(@ModelAttribute("modifyBean") User modifyBean,
-							BindingResult result) {
-		if (result.hasErrors()) {	
+	public String modify_pro(@Valid @ModelAttribute("modifyBean") User modifyBean, BindingResult result) {
+
+		if (result.hasErrors()) {
 			return "user/modify";
 		}
+		userService.modifyUser(modifyBean);
 		return "user/modify_success";
 	}
 
@@ -51,11 +54,10 @@ public class UserController {
 
 	@GetMapping("/login")
 	public String login(@ModelAttribute("loginProBean") User loginProBean,
-			            @RequestParam(value="fail", defaultValue="false") boolean fail,
-			            Model model) {
-		
-		model.addAttribute("fail",fail);
-		
+			@RequestParam(value = "fail", defaultValue = "false") boolean fail, Model model) {
+
+		model.addAttribute("fail", fail);
+
 		return "user/login";
 	}
 
@@ -64,13 +66,12 @@ public class UserController {
 		if (result.hasErrors()) {
 			return "user/login";
 		}
-		
-		userService.getLoginUser(loginProBean);  //로그인 성공하면 user_idx, user_name추출
-		
-		if(loginBean.isUserLogin()==true) {
+
+		userService.getLoginUser(loginProBean); // 로그인 성공하면 user_idx, user_name추출
+
+		if (loginBean.isUserLogin() == true) {
 			return "user/login_success";
-		}
-		else {
+		} else {
 			return "user/login_fail";
 		}
 	}
@@ -91,7 +92,7 @@ public class UserController {
 
 		return "user/join_success";
 	}
-	
+
 	@GetMapping("/not_login")
 	public String not_login() {
 		return "user/not_login";

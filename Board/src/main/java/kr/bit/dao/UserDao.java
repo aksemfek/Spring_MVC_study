@@ -27,7 +27,7 @@ public class UserDao {
 	public User getModifyUser(int user_idx) {
 		return userMapper.getModifyUser(user_idx);
 	}
-
+	
 	public void modifyUser(User modifyBean) {
 		userMapper.modifyUser(modifyBean);
 	}
