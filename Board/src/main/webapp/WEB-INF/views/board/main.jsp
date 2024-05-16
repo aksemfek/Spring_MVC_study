@@ -25,7 +25,7 @@
 	<div class="container" style="margin-top: 100px">
 		<div class="card shadow">
 			<div class="card-body">
-				<h3 class="card-title">게시판 이름</h3>
+				<h3 class="card-title">${boardName }</h3>
 				<table class="table table-hover" id="board_list">
 					<thead>
 						<tr>
@@ -37,60 +37,18 @@
 					</thead>
 
 					<tbody>
-						<tr>
-							<td class="text-center d-none d-md-table-cell">10
-							</th>
-							<td class="w-50">제목
-							</th>
-							<td class="text-center d-none d-md-table-cell">홍길동
-							</th>
-							<td class="text-center d-none d-md-table-cell">2024-05-13
-							</th>
-						</tr>
-
-						<tr>
-							<td class="text-center d-none d-md-table-cell">10
-							</th>
-							<td class="w-50">제목
-							</th>
-							<td class="text-center d-none d-md-table-cell">홍길동
-							</th>
-							<td class="text-center d-none d-md-table-cell">2024-05-13
-							</th>
-						</tr>
-
-						<tr>
-							<td class="text-center d-none d-md-table-cell">10
-							</th>
-							<td class="w-50">제목
-							</th>
-							<td class="text-center d-none d-md-table-cell">홍길동
-							</th>
-							<td class="text-center d-none d-md-table-cell">2024-05-13
-							</th>
-						</tr>
-
-						<tr>
-							<td class="text-center d-none d-md-table-cell">10
-							</th>
-							<td class="w-50">제목
-							</th>
-							<td class="text-center d-none d-md-table-cell">홍길동
-							</th>
-							<td class="text-center d-none d-md-table-cell">2024-05-13
-							</th>
-						</tr>
-
-						<tr>
-							<td class="text-center d-none d-md-table-cell">10
-							</th>
-							<td class="w-50">제목
-							</th>
-							<td class="text-center d-none d-md-table-cell">홍길동
-							</th>
-							<td class="text-center d-none d-md-table-cell">2024-05-13
-							</th>
-						</tr>
+						<c:forEach var='obj' items="${contentLi }">
+							<tr>
+								<td class="text-center d-none d-md-table-cell">${obj.content_idx}
+								</td>
+								<td class="w-50">${obj.content_subject }
+								</td>
+								<td class="text-center d-none d-md-table-cell">${obj.content_writer_name }
+								</td>
+								<td class="text-center d-none d-md-table-cell">${obj.content_date }
+								</td>
+							</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 
@@ -118,10 +76,11 @@
 						<li class="page-item"><a class="page-link" href="#">다음</a></li>
 					</ul>
 				</div>
-				
+
 				<div class="text-right">
-					<a href="${root }board/write" class="btn btn-primary">글쓰기</a>
-				</div>	
+					<a href="${root }board/write?board_info_idx=${board_info_idx}"
+						class="btn btn-primary">글쓰기</a>
+				</div>
 			</div>
 		</div>
 		<c:import url="/WEB-INF/views/include/bottom_menu.jsp" />

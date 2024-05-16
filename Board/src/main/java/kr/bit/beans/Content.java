@@ -18,6 +18,16 @@ public class Content {
 
 	private String content_date;
 
+	private String content_writer_name;
+
+	public String getContent_writer_name() {
+		return content_writer_name;
+	}
+
+	public void setContent_writer_name(String content_writer_name) {
+		this.content_writer_name = content_writer_name;
+	}
+
 	public int getContent_idx() {
 		return content_idx;
 	}
