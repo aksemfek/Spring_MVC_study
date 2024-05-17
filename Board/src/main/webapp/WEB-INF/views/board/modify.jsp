@@ -27,7 +27,7 @@
 					<input type="hidden" name = "page" value="${page }">
 					<div class="form-group">
 						<form:label path="content_writer_name">글쓴이</form:label> 
-						<form:input readonly="true" class="form-control" path="board_writer_name" />
+						<form:input readonly="true" class="form-control" path="content_writer_name" />
 					</div>
 					
 					<div class="form-group">
@@ -37,13 +37,13 @@
 					
 					
 					<div class="form-group">
-						<form:label for="content_subject">제목</form:form> 
-						<form:input class="form-control" path="content_subject" "/>
+						<form:label path="content_subject">제목</form:label> 
+						<form:input class="form-control" path="content_subject" />
 						<form:errors path="content_subject" style='color:red'></form:errors>
 					</div>
 					
 					<div class="form-group">
-						<form:label for="content_text">내용</form:label> 
+						<form:label path="content_text">내용</form:label> 
 						<form:textarea class="form-control" path="content_text"
 							rows="10" style="resize:none"></form:textarea>
 						<form:errors path="content_text" style='color:red'></form:errors>

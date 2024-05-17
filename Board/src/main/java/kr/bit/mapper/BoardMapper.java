@@ -37,10 +37,13 @@ public interface BoardMapper {
 			+ "FROM content_table a1 JOIN user_table a2 " + "ON a1.content_writer_idx = a2.user_idx "
 			+ "WHERE content_idx = #{content_idx}")
 	Content getInfo(int content_idx);
-	
+
 	@Update("UPDATE content_table SET content_subject = #{content_subject}, content_text= #{content_text} where content_idx = #{content_idx}")
 	void modifyInfo(Content modifyBean);
-	
-	@Delete("delete from content_table where conten_idx=#{content_idx}")
+
+	@Delete("delete from content_table where content_idx=#{content_idx}")
 	void deleteInfo(int content_idx);
+
+	@Select("select count(*) from content_table where content_board_idx=#{content_board_idx}")
+	int getCnt(int content_board_idx);
 }

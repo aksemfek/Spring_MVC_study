@@ -11,6 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import kr.bit.beans.Content;
+import kr.bit.beans.Page;
 import kr.bit.beans.User;
 import kr.bit.dao.BoardDao;
 
@@ -51,12 +52,22 @@ public class BoardService {
 	public Content getInfo(int content_idx) {
 		return boardDao.getInfo(content_idx);
 	}
-	
+
 	public void modifyInfo(Content modifyBean) {
 		boardDao.modifyInfo(modifyBean);
 	}
-		
+
 	public void deleteInfo(int content_idx) {
 		boardDao.deleteInfo(content_idx);
+	}
+	
+	public Page getCnt(int content_board_idx, int currentPage) {
+		
+		int content_cnt=boardDao.getCnt(content_board_idx);
+		
+		Page p = new Page(content_board_idx, currentPage, page_listcount, page_pa);
+		
+		return p;
+		
 	}
 }

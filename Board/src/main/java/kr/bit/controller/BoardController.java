@@ -1,6 +1,5 @@
 package kr.bit.controller;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -8,7 +7,6 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.bit.beans.Content;
+import kr.bit.beans.Page;
 import kr.bit.beans.User;
 import kr.bit.dao.BoardDao;
 import kr.bit.service.BoardService;
@@ -44,8 +43,8 @@ public class BoardController {
 		List<Content> contentLi = boardService.getContent(board_info_idx, page);
 		model.addAttribute("contentLi", contentLi); // 게시글 목록
 
-//		Page pBean=boardService.getCnt(board_info_idx, page);
-//		model.addAttribute("pBean", pBean);
+		Page pBean = boardService.getCnt(board_info_idx, page);
+		model.addAttribute("pBean", pBean);
 		model.addAttribute("page", page);
 
 		return "board/main";
@@ -124,7 +123,7 @@ public class BoardController {
 	@GetMapping("/delete")
 	public String delete(@RequestParam("board_info_idx") int board_info_idx,
 			@RequestParam("content_idx") int content_idx, Model model) {
-		
+
 		boardService.deleteInfo(content_idx);
 		model.addAttribute("board_info_idx", board_info_idx);
 

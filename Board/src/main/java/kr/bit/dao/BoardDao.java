@@ -16,7 +16,11 @@ public class BoardDao {
 	private BoardMapper boardMapper;
 
 	public void addContent(Content writeContentBean) {
-		boardMapper.addContent(writeContentBean);
+
+		for (int i = 0; i < 500; i++) {
+
+			boardMapper.addContent(writeContentBean);
+		}
 	}
 
 	public String getBaordName(int board_info_idx) {
@@ -27,8 +31,8 @@ public class BoardDao {
 
 		return boardMapper.getContent(board_info_idx, rowBounds.getOffset(), rowBounds.getLimit());
 	}
-	
-	public  Content getInfo(int content_idx) {
+
+	public Content getInfo(int content_idx) {
 		return boardMapper.getInfo(content_idx);
 	}
 
@@ -38,5 +42,9 @@ public class BoardDao {
 
 	public void deleteInfo(int content_idx) {
 		boardMapper.deleteInfo(content_idx);
+	}
+	
+	public int getCnt(int content_board_idx) {
+		return boardMapper.getCnt(content_board_idx);
 	}
 }

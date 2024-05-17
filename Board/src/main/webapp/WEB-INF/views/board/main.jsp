@@ -39,54 +39,77 @@
 					<tbody>
 						<c:forEach var='obj' items="${contentLi }">
 							<tr>
-								<td class="text-center d-none d-md-table-cell">${obj.content_idx }
+								<td class="text-center d-none d-md-table-cell">${obj.content_idx}
 								</td>
-								
 								<td><a
-									href='${root }board/read?board_info_idx=${board_info_idx }&content_idx=${obj.content_idx }&page=${page }'>${obj.content_subject }</a>
+									href='${root }board/read?board_info_idx=${board_info_idx}&content_idx=${obj.content_idx}&page=${page}'>${obj.content_subject }</a>
 								</td>
-								
 								<td class="text-center d-none d-md-table-cell">${obj.content_writer_name }
 								</td>
-								
 								<td class="text-center d-none d-md-table-cell">${obj.content_date }
 								</td>
 							</tr>
 						</c:forEach>
+
 					</tbody>
 				</table>
 
 				<div class="d-none d-md-block">
 					<ul class="pagination justify-content-center">
-						<li class="page-item"><a class="page-link" href="#">이전</a></li>
-						<li class="page-item"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item"><a class="page-link" href="#">4</a></li>
-						<li class="page-item"><a class="page-link" href="#">5</a></li>
-						<li class="page-item"><a class="page-link" href="#">6</a></li>
-						<li class="page-item"><a class="page-link" href="#">7</a></li>
-						<li class="page-item"><a class="page-link" href="#">8</a></li>
-						<li class="page-item"><a class="page-link" href="#">9</a></li>
-						<li class="page-item"><a class="page-link" href="#">10</a></li>
-						<li class="page-item"><a class="page-link" href="#">다음</a></li>
-					</ul>
-				</div>
+						<c:choose>
+							<c:when test="${pBean.prePage <= 0 }">
+								<li class="page-item disabled"><a href="#"
+									class="page-link">이전</a></li>
+							</c:when>
+							<c:otherwise>
+								<li class="page-item"><a
+									href="${root }board/main?board_info_idx=${board_info_idx}&page=${pBean.prePage}"
+									class="page-link">이전</a></li>
+							</c:otherwise>
+						</c:choose>
 
 
-				<div class="d-block d-md-none">
-					<ul class="pagination justify-content-center">
-						<li class="page-item"><a class="page-link" href="#">이전</a></li>
-						<li class="page-item"><a class="page-link" href="#">다음</a></li>
+						<c:forEach var='idx' begin="${pBean.min }" end='${pBean.max }'>
+							<c:choose>
+								<c:when test="${idx == pBean.currentPage }">
+									<li class="page-item active"><a
+										href="${root }board/main?board_info_idx=${board_info_idx}&page=${idx}"
+										class="page-link">${idx }</a></li>
+								</c:when>
+								<c:otherwise>
+									<li class="page-item"><a
+										href="${root }board/main?board_info_idx=${board_info_idx}&page=${idx}"
+										class="page-link">${idx }</a></li>
+								</c:otherwise>
+							</c:choose>
+
+						</c:forEach>
+
+						<c:choose>
+							<c:when test="${pBean.max >= pBean.pageCnt }">
+								<li class="page-item disabled"><a href="#"
+									class="page-link">다음</a></li>
+							</c:when>
+							<c:otherwise>
+								<li class="page-item"><a
+									href="${root }board/main?board_info_idx=${board_info_idx}&page=${pBean.nextPage}"
+									class="page-link">다음</a></li>
+							</c:otherwise>
+						</c:choose>
+
 					</ul>
 				</div>
 
 				<div class="text-right">
-					<a href="${root }board/write?board_info_idx=${board_info_idx }"
+					<a href="${root }board/write?board_info_idx=${board_info_idx}"
 						class="btn btn-primary">글쓰기</a>
 				</div>
+
 			</div>
 		</div>
-		<c:import url="/WEB-INF/views/include/bottom_menu.jsp" />
+	</div>
+
+	<c:import url="/WEB-INF/views/include/bottom_menu.jsp" />
+
 </body>
 </html>
