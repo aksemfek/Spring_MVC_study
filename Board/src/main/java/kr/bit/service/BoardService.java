@@ -51,4 +51,12 @@ public class BoardService {
 	public Content getInfo(int content_idx) {
 		return boardDao.getInfo(content_idx);
 	}
+	
+	public void modifyInfo(Content modifyBean) {
+		boardDao.modifyInfo(modifyBean);
+	}
+		
+	public void deleteInfo(int content_idx) {
+		boardDao.deleteInfo(content_idx);
+	}
 }

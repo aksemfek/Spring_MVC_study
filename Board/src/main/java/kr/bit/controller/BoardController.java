@@ -46,7 +46,7 @@ public class BoardController {
 
 //		Page pBean=boardService.getCnt(board_info_idx, page);
 //		model.addAttribute("pBean", pBean);
-		model.addAttribute("page",page);
+		model.addAttribute("page", page);
 
 		return "board/main";
 	}
@@ -113,16 +113,21 @@ public class BoardController {
 	public String modify_pro(@Valid @ModelAttribute("modifyBean") Content modifyBean, BindingResult result,
 			@RequestParam("page") int page, Model model) {
 		model.addAttribute("page", page);
-		
-		if(result.hasErrors()) {
+
+		if (result.hasErrors()) {
 			return "board/modify";
 		}
-//		boardService.modifyInfo(modifyBean);
+		boardService.modifyInfo(modifyBean);
 		return "board/modify_success";
 	}
 
 	@GetMapping("/delete")
-	public String delete() {
+	public String delete(@RequestParam("board_info_idx") int board_info_idx,
+			@RequestParam("content_idx") int content_idx, Model model) {
+		
+		boardService.deleteInfo(content_idx);
+		model.addAttribute("board_info_idx", board_info_idx);
+
 		return "board/delete";
 	}
 

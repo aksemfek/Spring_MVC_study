@@ -31,4 +31,12 @@ public class BoardDao {
 	public  Content getInfo(int content_idx) {
 		return boardMapper.getInfo(content_idx);
 	}
+
+	public void modifyInfo(Content modifyBean) {
+		boardMapper.modifyInfo(modifyBean);
+	}
+
+	public void deleteInfo(int content_idx) {
+		boardMapper.deleteInfo(content_idx);
+	}
 }

@@ -2,10 +2,12 @@ package kr.bit.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.bit.beans.Content;
 
@@ -35,4 +37,10 @@ public interface BoardMapper {
 			+ "FROM content_table a1 JOIN user_table a2 " + "ON a1.content_writer_idx = a2.user_idx "
 			+ "WHERE content_idx = #{content_idx}")
 	Content getInfo(int content_idx);
+	
+	@Update("UPDATE content_table SET content_subject = #{content_subject}, content_text= #{content_text} where content_idx = #{content_idx}")
+	void modifyInfo(Content modifyBean);
+	
+	@Delete("delete from content_table where conten_idx=#{content_idx}")
+	void deleteInfo(int content_idx);
 }
