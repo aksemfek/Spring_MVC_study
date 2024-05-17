@@ -27,4 +27,8 @@ public class BoardDao {
 
 		return boardMapper.getContent(board_info_idx, rowBounds.getOffset(), rowBounds.getLimit());
 	}
+	
+	public  Content getInfo(int content_idx) {
+		return boardMapper.getInfo(content_idx);
+	}
 }

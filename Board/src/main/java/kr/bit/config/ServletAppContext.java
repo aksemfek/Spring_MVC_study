@@ -24,9 +24,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import kr.bit.beans.User;
 import kr.bit.interceptor.LoginInterceptor;
 import kr.bit.interceptor.TopMenuInterceptor;
+import kr.bit.interceptor.WriterInterceptor;
 import kr.bit.mapper.BoardMapper;
 import kr.bit.mapper.TopMenuMapper;
 import kr.bit.mapper.UserMapper;
+import kr.bit.service.BoardService;
 import kr.bit.service.TopMenuService;
 
 @Configuration
@@ -51,6 +53,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Autowired
 	private TopMenuService topMenuService;
+	
+	@Autowired
+	private BoardService boardService;
 
 	@Resource(name = "loginBean")
 	private User loginBean; // 로그인 여부에 따라 상단메뉴바가 다르게 보이도록 하기위해 주입받음
@@ -108,13 +113,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 	}
 
 	@Bean
-	public MapperFactoryBean<BoardMapper> board_mapper(SqlSessionFactory factory) throws Exception {
-
-		MapperFactoryBean<BoardMapper> fac = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
-
+	public MapperFactoryBean<BoardMapper> board_mapper(SqlSessionFactory factory) throws Exception{
+		
+		MapperFactoryBean<BoardMapper> fac = 
+				new MapperFactoryBean<BoardMapper>(BoardMapper.class);
+		
 		fac.setSqlSessionFactory(factory);
 		return fac;
-
+		
 	}
 
 	// 인터셉터 -> 등록
@@ -133,6 +139,10 @@ public class ServletAppContext implements WebMvcConfigurer {
 		re2.addPathPatterns("/user/modify", "user/loglout", "/board/**");
 		// 이 주소로 들어가기전에 로그인 여부를 알아내서 로그인이 안되어 있다면 user/not_login 으로 강제 이동
 		re2.excludePathPatterns("/board/main");
+		
+		WriterInterceptor writer = new WriterInterceptor(loginBean, boardService);
+		InterceptorRegistration re3 = re.addInterceptor(writer);
+		re3.addPathPatterns("/board/modify", "/board/delete");
 	}
 
 	@Bean

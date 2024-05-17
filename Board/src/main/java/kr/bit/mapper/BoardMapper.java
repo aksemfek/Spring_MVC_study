@@ -28,4 +28,11 @@ public interface BoardMapper {
 			+ "LIMIT #{offset}, #{limit}")
 	List<Content> getContent(@Param("board_info_idx") int board_info_idx, @Param("offset") int offset,
 			@Param("limit") int limit);
+
+	@Select("SELECT a2.user_name AS content_writer_name, "
+			+ "DATE_FORMAT(a1.content_date, '%Y-%m-%d') AS content_date, "
+			+ "a1.content_subject, a1.content_text, a1.content_writer_idx "
+			+ "FROM content_table a1 JOIN user_table a2 " + "ON a1.content_writer_idx = a2.user_idx "
+			+ "WHERE content_idx = #{content_idx}")
+	Content getInfo(int content_idx);
 }

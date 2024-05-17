@@ -39,12 +39,16 @@
 					<tbody>
 						<c:forEach var='obj' items="${contentLi }">
 							<tr>
-								<td class="text-center d-none d-md-table-cell">${obj.content_idx}
+								<td class="text-center d-none d-md-table-cell">${obj.content_idx }
 								</td>
-								<td class="w-50">${obj.content_subject }
+								
+								<td><a
+									href='${root }board/read?board_info_idx=${board_info_idx }&content_idx=${obj.content_idx }&page=${page }'>${obj.content_subject }</a>
 								</td>
+								
 								<td class="text-center d-none d-md-table-cell">${obj.content_writer_name }
 								</td>
+								
 								<td class="text-center d-none d-md-table-cell">${obj.content_date }
 								</td>
 							</tr>
@@ -78,7 +82,7 @@
 				</div>
 
 				<div class="text-right">
-					<a href="${root }board/write?board_info_idx=${board_info_idx}"
+					<a href="${root }board/write?board_info_idx=${board_info_idx }"
 						class="btn btn-primary">글쓰기</a>
 				</div>
 			</div>

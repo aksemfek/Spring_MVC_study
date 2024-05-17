@@ -47,4 +47,8 @@ public class BoardService {
 
 		return boardDao.getContent(board_info_idx, rowBounds);
 	}
+
+	public Content getInfo(int content_idx) {
+		return boardDao.getInfo(content_idx);
+	}
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="root" value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html>
@@ -20,39 +21,41 @@
 	<div class="container" style="margin-top: 100px">
 		<div class="card shadow">
 			<div class="card-body">
-				<form action="${root }board/read" method="get">
+				<form:form action="${root }board/read" method="post" modelAttribute="modifyBean">
+					<form:hidden path="content_idx"/>
+					<form:hidden path="content_board_idx"/>
+					<input type="hidden" name = "page" value="${page }">
 					<div class="form-group">
-						<label for="board_writer_name">글쓴이</label> 
-						<input type="text" value="홍길동" disabled="disabled" class="form-control" 
-										id="board_writer_name" name="board_writer_name"/>
+						<form:label path="content_writer_name">글쓴이</form:label> 
+						<form:input readonly="true" class="form-control" path="board_writer_name" />
 					</div>
 					
 					<div class="form-group">
-						<label for="board_date">작성날짜</label> 
-						<input type="text" value="2024-05-13" disabled="disabled" class="form-control" 
-										id="board_date" name="board_date"/>
+						<form:label path="content_date">작성날짜</form:label> 
+						<form:input readonly="true" path="content_date" class="form-control" />
 					</div>
 					
 					
 					<div class="form-group">
-						<label for="board_subject">제목</label> 
-						<input type="text" value="제목" class="form-control" 
-										id="board_subject" name="board_subject"/>
+						<form:label for="content_subject">제목</form:form> 
+						<form:input class="form-control" path="content_subject" "/>
+						<form:errors path="content_subject" style='color:red'></form:errors>
 					</div>
 					
 					<div class="form-group">
-						<label for="board_content">내용</label> 
-						<textarea class="form-control" id="board_content" name="board_content"
-							rows="10" style="resize:none"></textarea>
+						<form:label for="content_text">내용</form:label> 
+						<form:textarea class="form-control" path="content_text"
+							rows="10" style="resize:none"></form:textarea>
+						<form:errors path="content_text" style='color:red'></form:errors>
 					</div>
 					
 					<div class="form-group">
 						<div class="text-right">
 							<button type="submit" class="btn btn-primary">수정완료</button>
-							<a href="${root }board/read" class="btn btn-info">취소</a>
+							<a href="${root }board/read?board_info_idx=${content_idx}&page=${page}" class="btn btn-info">취소</a>
 						</div>
 					</div>
-				</form>
+				</form:form>
 			</div>
 		</div>
 	</div>

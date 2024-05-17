@@ -22,33 +22,35 @@
 			<div class="card-body">
 				<div class="form-group">
 					<label for="board_writer_name">글쓴이</label> 
-					<input type="text" value="홍길동" disabled="disabled" class="form-control" 
+					<input type="text" value="${readContent.content_writer_name }" disabled="disabled" class="form-control" 
 										id="board_writer_name" name="board_writer_name"/>
 				</div>
 				
 				<div class="form-group">
 					<label for="board_date">작성날짜</label> 
-					<input type="text" value="2024-05-13" disabled="disabled" class="form-control" 
+					<input type="text" value="${readContent.content_date }" disabled="disabled" class="form-control" 
 										id="board_date" name="board_date"/>
 				</div>
 				
 				<div class="form-group">
 					<label for="board_subject">제목</label> 
-					<input type="text" value="제목" disabled="disabled" class="form-control" 
+					<input type="text" value="${readContent.content_subject }" disabled="disabled" class="form-control" 
 										id="board_subject" name="board_subject"/>
 				</div>
 				
 				<div class="form-group">
 					<label for="board_content">내용</label> 
 					<textarea  style="resize: none" rows="10" disabled="disabled" 
-					class="form-control" id="board_content" name="board_content">내용</textarea>
+					class="form-control" id="board_content" name="board_content">${readContent.content_text }</textarea>
 				</div>
 					
 				<div class="form-group">
 					<div class="text-right">
-						<a href="${root }board/main" class="btn btn-primary">목록</a>
-						<a href="${root }board/modify" class="btn btn-info">수정</a>
-						<a href="${root }board/delete" class="btn btn-danger">삭제</a>
+						<a href="${root }board/main?board_info_idx=${board_info_idx}&page=${page}" class="btn btn-primary">목록</a>
+						<c:if test="${loginBean.user_idx == readContent.content_writer_idx }">
+							<a href="${root }board/modify?board_info_idx=${board_info_idx}&content_idx=${content_idx}&page=${page}" class="btn btn-info">수정</a>
+							<a href="${root }board/delete?board_info_idx=${board_info_idx}&content_idx=${content_idx}" class="btn btn-danger">삭제</a>
+						</c:if>
 					</div>
 				</div>
 				
