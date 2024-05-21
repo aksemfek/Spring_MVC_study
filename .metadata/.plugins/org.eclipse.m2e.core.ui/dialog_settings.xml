@@ -6,11 +6,13 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Test"/>
 			<item value="MVC_Basic_01"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Test"/>
 			<item value="MVC_Basic_01"/>
 		</list>
 		<list key="version">

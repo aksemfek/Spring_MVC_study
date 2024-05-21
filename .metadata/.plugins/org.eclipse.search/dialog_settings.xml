@@ -24,8 +24,8 @@
 	<section name="DialogBounds_SearchDialog">
 		<item key="DIALOG_X_ORIGIN" value="433"/>
 		<item key="DIALOG_Y_ORIGIN" value="177"/>
-		<item key="DIALOG_WIDTH" value="575"/>
-		<item key="DIALOG_HEIGHT" value="390"/>
+		<item key="DIALOG_WIDTH" value="577"/>
+		<item key="DIALOG_HEIGHT" value="384"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>

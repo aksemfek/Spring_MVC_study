@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="maven-war"/>
+		<item key="selection" value="Pre"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pre"/>
+			<item value="row"/>
+			<item value="board_info_idx"/>
+			<item value="@GetMapping(&quot;/write&quot;)&#x0D;&#x0A;&#x09;public String write(@ModelAttribute(&quot;writeBean&quot;) Content writeBean,&#x0D;&#x0A;&#x09;&#x09;&#x09;            @RequestParam(&quot;board_info_idx&quot;) int board_info_idx) {&#x0D;&#x0A;&#x09;&#x09;&#x0D;&#x0A;&#x09;&#x09;writeBean.setContent_board_idx(board_info_idx); //글쓰기 한 팀 세팅&#x0D;&#x0A;&#x09;&#x09;&#x0D;&#x0A;&#x09;&#x09;return &quot;board/write&quot;;&#x0D;&#x0A;&#x09;}"/>
+			<item value="boardController"/>
+			<item value="["/>
+			<item value="]"/>
+			<item value="[]"/>
 			<item value="maven-war"/>
 			<item value="maven"/>
 		</list>
@@ -15,8 +23,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="985"/>
-		<item key="DIALOG_Y_ORIGIN" value="168"/>
+		<item key="DIALOG_X_ORIGIN" value="1064"/>
+		<item key="DIALOG_Y_ORIGIN" value="483"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
