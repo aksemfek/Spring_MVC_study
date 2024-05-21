@@ -16,32 +16,13 @@ import kr.bit.mapper.BoardMapper;
 @Controller
 public class BoardController {
 
-	@Autowired
-	BoardMapper boardMapper;
-
-	@RequestMapping("/")
-	public String home() {
-		return "home";
-	}
-
-	@RequestMapping("/boardList")
-	public @ResponseBody List<Board> boardList() {
-		List<Board> list = boardMapper.getLists();
-		return list;
-	}
-
-	@RequestMapping("/boardInsert")
-	public @ResponseBody void boardInsert(Board vo) {
-		boardMapper.boardInsert(vo);
-	}
-
-	@RequestMapping("/boardDelete")
-	public @ResponseBody void boardDelete(@RequestParam("idx") int idx) {
-		boardMapper.boardDelete(idx);
-	}
 	
-	@RequestMapping("/boardUpdate")
-	public @ResponseBody void boardUpdate(Board vo) {
-		boardMapper.boardUpdate(vo);
+
+	@RequestMapping("/MainBoard")
+	public String home() {
+		return "board/main";
 	}
+
+	
+
 }
