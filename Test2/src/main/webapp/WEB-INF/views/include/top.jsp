@@ -12,15 +12,33 @@
 					class="navbar-toggler-icon"></span>
 			</button>
 
-			<a class="navbar-brand" href="${root }/">스프링</a>
+			<a class="navbar-brand" href="${root }/">Spring Legacy</a>
 		</div>
 
-		<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-			<ul class="navbar-nav">
-				<li class="nav-item dropdown">
-				<a href="${root }/">Home </a></li>
+		<div class="collapse navbar-collapse" id="Navbar">
+			<ul class="nav navbar-nav">
+				<li class="active">
 				<li><a href="MainBoard">게시판</a></li>
-				<li><a href="#">Another action</a></li>
+			</ul>
+
+
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a class="dropdown-toggle" href="#"
+					data-toggle="dropdown" aria-expanded="false"> 클릭 </a>
+					<ul class="dropdown-menu dropdown-menu-dark">
+						<li><a class="dropdown-item" href="#">로그인</a></li>
+						<li><a class="dropdown-item" href="${root}/memberJoin">회원가입</a></li>
+					</ul></li>
+			</ul>
+
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a class="dropdown-toggle" href="#"
+					data-toggle="dropdown" aria-expanded="false"> 정보 </a>
+					<ul class="dropdown-menu dropdown-menu-dark">
+						<li><a class="dropdown-item" href="#">회원수정</a></li>
+						<li><a class="dropdown-item" href="#">사진</a></li>
+						<li><a class="dropdown-item" href="#">로그아웃</a></li>
+					</ul></li>
 			</ul>
 		</div>
 	</div>
