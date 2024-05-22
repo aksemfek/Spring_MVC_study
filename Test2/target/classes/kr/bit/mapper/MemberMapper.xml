@@ -3,7 +3,23 @@
 <mapper namespace="kr.bit.mapper.MemberMapper">
 
 	<select id="registerCheck" resultType="kr.bit.entity.Member">
-		select * from member_table where memberID=#{memberID}
+		select * from member_table
+		where memberID=#{memberID}
+	</select>
+
+	<insert id="register" parameterType="kr.bit.entity.Member">
+		insert into
+		member_table(memberID,memberPw,memberName,memberAge,
+		memberGender,memberEmail,memberProfile)
+		values(#{memberID},#{memberPw},#{memberName},
+		#{memberAge},#{memberGender},#{memberEmail},#{memberProfile})
+	</insert>
+
+	<select id="memberLogin" parameterType="kr.bit.entity.Member"
+		resultType="kr.bit.entity.Member">
+		select * from member_table
+		where memberID =#{memberID} AND
+		memberPw =#{memberPw}
 	</select>
 
 </mapper>
