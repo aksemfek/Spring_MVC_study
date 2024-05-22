@@ -10866,3 +10866,367 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 13:04:06.382
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:18:50.362
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:18:50.371
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:52:11.143
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:52:11.157
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:52:46.007
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:52:46.010
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:53:13.571
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:53:13.573
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:57:05.352
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:57:05.360
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:12.589
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:12.591
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:21.067
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:21.078
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:33.238
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:33.240
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:39.530
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:39.532
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:45.372
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:58:45.373
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:59:43.934
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:59:43.937
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:59:58.899
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 15:59:58.906
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2024-05-22 16:05:16.676
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2202)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeStructuredDocumentRegion(XMLModelParser.java:548)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeData(XMLModelParser.java:238)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeRegion(XMLModelParser.java:321)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.regionChanged(DOMModelImpl.java:801)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:546)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1184)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1968)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2427)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2412)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:143)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:146)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2372)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:108)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:106)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1093)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1118)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:627)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:223)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7638)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8538)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2312)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7427)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6225)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6252)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5931)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4577)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1561)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1557)
+	at org.eclipse.swt.widgets.Canvas.sendKeyEvent(Canvas.java:522)
+	at org.eclipse.swt.widgets.Control.doCommandBySelector(Control.java:1085)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6435)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSResponder.interpretKeyEvents(NSResponder.java:59)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:607)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6267)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:236)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2162)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2511)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6387)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5635)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5774)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3936)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:05:27.550
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:05:27.554
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:06:25.494
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:06:25.497
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:07:33.180
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:07:33.182
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:07:52.908
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:07:52.912
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:13:12.463
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:13:12.466
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:14:46.831
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:14:46.835
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:40.295
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:40.298
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:51.311
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:51.320
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:53.343
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:22:53.345
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:43:42.760
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:43:42.763
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:44:10.488
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:44:10.494
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:44:24.380
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:44:24.385
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:45:27.250
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:45:27.255
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-05-22 16:56:59.054
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:771)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:275)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:290)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:268)
+	at net.harawata.mybatipse.Activator.getIcon(Activator.java:121)
+	at net.harawata.mybatipse.mybatis.XmlCompletionProposalComputer.proposeStatementId(XmlCompletionProposalComputer.java:664)
+	at net.harawata.mybatipse.mybatis.XmlCompletionProposalComputer.addAttributeValueProposals(XmlCompletionProposalComputer.java:567)
+	at org.eclipse.wst.xml.ui.internal.contentassist.AbstractXMLCompletionProposalComputer.computeAttributeValueProposals(AbstractXMLCompletionProposalComputer.java:598)
+	at org.eclipse.wst.xml.ui.internal.contentassist.AbstractXMLCompletionProposalComputer.computeCompletionProposals(AbstractXMLCompletionProposalComputer.java:403)
+	at net.harawata.mybatipse.mybatis.XmlCompletionProposalComputer.computeCompletionProposals(XmlCompletionProposalComputer.java:110)
+	at org.eclipse.wst.xml.ui.internal.contentassist.AbstractXMLCompletionProposalComputer.computeCompletionProposals(AbstractXMLCompletionProposalComputer.java:173)
+	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
+	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
+	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
+	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
+	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2063)
+	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2062)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2059)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$0(CompletionProposalPopup.java:507)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:502)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.lambda$0(ContentAssistant.java:399)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4318)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:57:23.884
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:57:23.888
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:59:00.779
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:59:00.790
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:59:23.258
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 16:59:23.259
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:05:36.014
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:05:36.019
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:05:44.786
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:05:44.787
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:06:56.170
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:06:56.176
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:06:58.226
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:06:58.227
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:09:11.684
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:09:11.686
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:12:24.287
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:12:24.300
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:13:31.411
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:13:31.413
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:13:56.839
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:13:56.840
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:17:06.607
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-05-22 17:17:06.612
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

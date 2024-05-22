@@ -27,7 +27,22 @@ $(document).ready(function(){
 <body>
 	<div class="container">
 		<jsp:include page="include/top.jsp" />
+
+		<c:if test="${empty memberVo }">
+			<h3>Spring Legacy</h3>
+		</c:if>
+
+		<c:if test="${!empty memberVo }">
+			${memberVo.memberName }님 환영합니다.
+		</c:if>
+
 		<div class="panel panel-default">
+
+			<div>
+				<img src="${root }/resources/images/cat-323262_640.jpg"
+					style="width: 100%; height: 350px;">
+			</div>
+
 			<div class="panel-body">
 				<ul class="nav nav-tabs">
 					<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
@@ -54,7 +69,7 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="modal fade" id="failModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content" id="msgType">

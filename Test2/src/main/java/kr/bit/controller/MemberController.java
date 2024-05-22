@@ -115,4 +115,48 @@ public class MemberController {
 
 	}
 
+	@RequestMapping("/memberUpdateForm")
+	public String memberUpdateForm() {
+		return "/member/memberUpdateForm";
+	}
+
+	@RequestMapping("/memberUpdate") // 수정된 데이터들이 Member클래스의 객체의 필드에 각각 담겨져있다.
+	public String memberUpdate(Member member, String memberPw1, String memberPw2, RedirectAttributes rttr,
+			HttpSession session) {
+		if (member.getMemberID().equals("") || memberPw1.equals("") || memberPw2.equals("")
+				|| member.getMemberName().equals("") || member.getMemberGender().equals("")
+				|| member.getMemberEmail().equals("")) {
+
+			rttr.addFlashAttribute("msg1", "실패");
+			rttr.addFlashAttribute("msg2", "입력해주세요");
+
+			return "redirect:/memberUpdateForm";
+		}
+		
+		if (!memberPw1.equals(memberPw2)) {
+			rttr.addFlashAttribute("msg1", "실패");
+			rttr.addFlashAttribute("msg2", "비밀번호가 다릅니다");
+
+			return "redirect:/memberUpdateForm";
+		}
+		
+		int result=memberMapper.memberUpdate(member);
+		
+		if (result == 1) { 
+			rttr.addFlashAttribute("msg1", "성공");
+			rttr.addFlashAttribute("msg2", "회원정보를 수정하였습니다.");
+
+			// 수정된 데이터들을 세션역역 memberVo에 담아서 redirect로 화면이동
+			session.setAttribute("memberVo", member);
+
+			return "redirect:/";
+		} else {
+			rttr.addFlashAttribute("msg1", "실패");
+			rttr.addFlashAttribute("msg2", "회원정보 수정에 실패했습니다");
+
+			return "redirect:memberUpdateForm/";
+		}
+
+	}
+
 }

@@ -9,7 +9,7 @@
 
 	<insert id="register" parameterType="kr.bit.entity.Member">
 		insert into
-		member_table(memberID,memberPw,memberName,memberAge,
+		member_table(memberID,memberPw,memberPw,memberAge,
 		memberGender,memberEmail,memberProfile)
 		values(#{memberID},#{memberPw},#{memberName},
 		#{memberAge},#{memberGender},#{memberEmail},#{memberProfile})
@@ -21,5 +21,13 @@
 		where memberID =#{memberID} AND
 		memberPw =#{memberPw}
 	</select>
+
+	<update id="memberUpdate" parameterType="kr.bit.entity.Member">
+		update
+		member_table set
+		memberPw=#{memberPw}, memberName=#{memberName},
+		memberAge=#{memberAge}, memberGender=#{memberGender},
+		memberEmail=#{memberEmail} where memberID=#{memberID}
+	</update>
 
 </mapper>
