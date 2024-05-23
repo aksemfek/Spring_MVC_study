@@ -1,17 +1,21 @@
 package kr.bit.controller;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.util.xml.DomUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.mysql.cj.Session;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.bit.entity.Member;
 import kr.bit.mapper.MemberMapper;
@@ -132,17 +136,17 @@ public class MemberController {
 
 			return "redirect:/memberUpdateForm";
 		}
-		
+
 		if (!memberPw1.equals(memberPw2)) {
 			rttr.addFlashAttribute("msg1", "실패");
 			rttr.addFlashAttribute("msg2", "비밀번호가 다릅니다");
 
 			return "redirect:/memberUpdateForm";
 		}
-		
-		int result=memberMapper.memberUpdate(member);
-		
-		if (result == 1) { 
+
+		int result = memberMapper.memberUpdate(member);
+
+		if (result == 1) {
 			rttr.addFlashAttribute("msg1", "성공");
 			rttr.addFlashAttribute("msg2", "회원정보를 수정하였습니다.");
 
@@ -156,6 +160,67 @@ public class MemberController {
 
 			return "redirect:memberUpdateForm/";
 		}
+
+	}
+
+	@RequestMapping("/memberImageForm")
+	public String memberImageForm() {
+		return "/member/memberImageForm";
+	}
+
+	@RequestMapping("/memberImageUpdate")
+	public String memberUpdate(HttpServletRequest request, HttpSession session, RedirectAttributes rttr)
+			throws IOException {
+
+		MultipartRequest multi = null;
+		int maxSize = 40 * 1024 * 1024;
+		String savePath = request.getRealPath("resources/upload");
+
+		multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
+
+		String memberID = multi.getParameter("memberID"); // 클라이언트에서 memberID 넘겨 받음
+
+		String newProfile = "";
+
+		File file = multi.getFile("memberProfile"); // input type file의 name값으로 파일 가져옴
+
+		if (file != null) {
+			String str = file.getName().substring(file.getName().lastIndexOf(".") + 1);
+			str = str.toUpperCase();
+
+			if (str.equals("PNG") || str.equals("GIF") || str.equals("jpg") || str.equals("jpeg")) {
+				String origin = memberMapper.getMember(memberID).getMemberProfile();
+
+				File file1 = new File(savePath + "/" + origin);
+				
+				if(file1.exists()) {
+					file1.delete();
+				}
+				newProfile = file.getName();
+			}else {
+				if(file.exists()) {
+					file.delete();
+				}
+				rttr.addFlashAttribute("msg1", "실패");
+				rttr.addFlashAttribute("msg2", "이미지 파일만 업로드할 수 있습니다.");
+				
+				return "redirect:/memberImageForm";
+			}
+		}
+		
+		Member member = new Member();
+		member.setMemberID(memberID);
+		member.setMemberProfile(newProfile);
+		memberMapper.memberProfileUpdate(member); // id기준으로 사진 업데이트		
+		
+		Member m = memberMapper.getMember(memberID);
+		
+		session.setAttribute("memberVo", m);
+		
+		rttr.addFlashAttribute("msg1", "성공");
+		rttr.addFlashAttribute("msg2", "업로드되었습니다.");
+		
+		return "redirect:/";
 
 	}
 

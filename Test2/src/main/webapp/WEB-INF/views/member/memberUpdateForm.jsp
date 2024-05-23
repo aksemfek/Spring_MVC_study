@@ -106,7 +106,7 @@ function goUpdate(){
 								<div class="form-group"
 									style="text-align: center; margin: 0 auto;">
 
-									<input type="radio" name="memberGender" autocomplete="off"
+									<input type="radio" name="memberGender" 	
 										value="남자"
 										<c:if test="${memberVo.memberGender eq '남자' }">
 										checked</c:if> />남자

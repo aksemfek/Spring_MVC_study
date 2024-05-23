@@ -15,4 +15,8 @@ public interface MemberMapper {
 	public Member memberLogin(Member memberVo);
 	
 	public int memberUpdate(Member memberVo);
+	
+	public Member getMember(String memberID);
+	
+	public void memberProfileUpdate(Member memberVo);
 }

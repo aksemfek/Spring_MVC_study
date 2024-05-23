@@ -33,6 +33,15 @@ $(document).ready(function(){
 		</c:if>
 
 		<c:if test="${!empty memberVo }">
+			<c:if test="${memberVo.memberProfile eq '' }">
+				<img src="${root }/resources/images/bo.jpg "
+					style="width: 50px; height: 50px;">
+			</c:if>
+			<!-- 로그인한 후 사진 등록을 하면 사진을 upload에 저장 -->
+			<c:if test="${memberVo.memberProfile ne '' }">
+				<img src="${root }/resources/upload/${memberVo.memberProfile } "
+					style="width: 50px; height: 50px;">
+			</c:if>
 			${memberVo.memberName }님 환영합니다.
 		</c:if>
 
