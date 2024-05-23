@@ -55,20 +55,38 @@
 							li += "<td>내용</td>";
 							li += "<td colspan='4'>";
 							li += "<textarea id='ta"+obj.idx+"' readonly rows='7' class='form-control'></textarea>";
-							li += "<br/>";
-							li += "<span id='up"+obj.idx+"'><button class='btn btn-success btn-sm' onclick='goUpdateForm("
+							
+							if("${memberVo.memberID}" == obj.memberID){
+							
+								li += "<br/>";
+								li += "<span id='up"+obj.idx+"'><button class='btn btn-success btn-sm' onclick='goUpdateForm("
 									+ obj.idx + ")'>수정화면</button></span>&nbsp;";
-							li += "<button class='btn btn-danger btn-sm' onclick='goDelete("
+								li += "<button class='btn btn-danger btn-sm' onclick='goDelete("
 									+ obj.idx + ")'>삭제</button>";
+							}
+							
+							else{
+								li += "<br/>";
+								li += "<span id='up"+obj.idx+"'><button disabled class='btn btn-success btn-sm' onclick='goUpdateForm("
+									+ obj.idx + ")'>수정화면</button></span>&nbsp;";
+								li += "<button disabled class='btn btn-danger btn-sm' onclick='goDelete("
+									+ obj.idx + ")'>삭제</button>";
+								
+							}
+							
 							li += "</td>";
 							li += "</tr>";
 
 						});
-		li += "<tr>";
-		li += "<td colspan='5'>";
-		li += "<button class='btn btn-primary btn-sm' onclick='getForm()'>글작성</button>";
-		li += "</td>";
-		li += "</tr>";
+		
+		//로그인이 안되어있으면 글작성버튼이 안보임
+		if(${!empty memberVo}){  
+			li += "<tr>";
+			li += "<td colspan='5'>";
+			li += "<button class='btn btn-primary btn-sm' onclick='getForm()'>글작성</button>";
+			li += "</td>";
+			li += "</tr>";
+		}
 		li += "</table>";
 		$("#view").html(li);
 
@@ -91,44 +109,38 @@
 		$("#up" + idx).html(newButton);
 	}
 
-	function goUpdate(idx) {
-
-		let title = $("#nt" + idx).val();
-		let content = $("#ta" + idx).val();
-
-		// 여러 개의 값을 json형식으로 컨트롤러에 보낼 때 json.stringify로 변환해서 전달해야함
-		// 그걸 컨트롤러에서 받을 때 @RequestBody를 통해 받음
+	function goUpdate(idx){
+		
+		let title=$("#nt"+idx).val();
+		let content=$("#ta"+idx).val();
+		
 		$.ajax({
-			url : "board/update",
-			type : "put",
-			contentType : 'application/json;charset=utf-8',
-			data : JSON.stringify({
-				"idx" : idx,
-				"title" : title,
-				"content" : content
-			}), //수정해서 가지고 갈 값
-			success : loadBoard,
+			url: "board/update",
+			type: "put",
+			//여러개의 값을 json형식으로 컨트롤러에 보낼 때 json.stringify 로 변환해서 전달해야함
+			//그걸 컨트롤러에서 받을 때 @RequestBody를 통해 받음
+			contentType: 'application/json;charset=uft-8',
+			data: JSON.stringify({"idx":idx, "title":title, "content":content}),  //수정해서 가지고 갈 값
+			success: loadBoard,
 			error : function() {
 				alert("error");
-			}
-		});
+			}	
+		});		
 	}
 
 	function goDelete(idx) {
-
 		$.ajax({
-			url : "board/" + idx,
-			type : "delete",
+			url : "board/"+idx,
+			type : "delete", //post방식으로 /boardInsert로 매핑
 			data : {
 				"idx" : idx
-			}, // 삭제할 글번호를 서버에 전달
+			}, //삭제할 글번호를 서버에 전달
 			success : loadBoard,
-			//서버와의 통신이 성공되면 loadBoard메서들 호출 -> 삭제한 후의 결과를 테이블 형식으로 출력
+			//서버와의 통신이 성공되면 loadBoard메서들 호출 -> 삭제한 후의 결과를 테이블형식으로 출력
 			error : function() {
 				alert("error");
 			}
 		});
-
 	}
 
 	function goInsert() {
@@ -146,46 +158,41 @@
 			}
 		});
 	}
-
-	//	제목을 클릭하면 내용보이게 함(게시글 번호 기준으로 서버에서 내용 가져와서 textarea에 뿌림)
+	//제목을 클릭하면 내용보이게 함 (게시글번호 기준으로 서버에서 내용가져와서 textarea에 뿌리고 싶음)
 	function goContent(idx) {
-		if ($("#con" + idx).css("display") == "none") {
-
+		if ($("#con" + idx).css("display") == "none") { //내용폼이 안보이는 상황이면
+			
 			$.ajax({
-				url : "board/" + idx,
-				type : "get",
-				data : {
-					"idx" : idx
-				},
-				dataType : "json",
-				success : function(data) {
-					$("#ta" + idx).val(data.content);
+				url: "board/"+idx,
+				type: "get",
+				data: {"idx":idx},
+				dataType: "json",
+				success: function(data){
+					$("#ta"+idx).val(data.content); //textarea에 내용 띄움
 				},
 				error : function() {
 					alert("error");
 				}
 			});
-
-			$("#con" + idx).css("display", "table-row"); // 제목 누르면 폼이 보임
-		} else { // 내용 폼이 보이면 -> 제목 클릭 -> 조회수 증가
+			$("#con" + idx).css("display", "table-row"); //제목누르면 폼이 보인다 
+			
+		} else { //내용 폼이 보이면 -> 제목클릭함 -> 조회수 증가
 			$("#con" + idx).css("display", "none"); //제목누르면 안보이게
-
+			
 			$.ajax({
-				url : "board/count/" + idx,
-				type : "put",
-				data : {
-					"idx" : idx
-				},
-				dataType : "json",
-				success : function(data) {
-					$("#cnt" + idx).text(data.count); //조회수 폼에 Board객체에 있는(data) 조회수 출력
+				url: "board/count/"+idx,
+				type: "put",
+				data: {"idx":idx},
+				dataType: "json",
+				success: function(data){
+					$("#cnt"+idx).text(data.count); //조회수 폼에 Board객체에 있는(data) 조회수 출력
 				},
 				error : function() {
 					alert("error");
 				}
 			});
-
 		}
+
 	}
 
 	function getForm() {
@@ -208,6 +215,7 @@
 			<div class="panel-body" id="view">본문</div>
 			<div class="panel-body" id="wfrom">
 				<form id="frm">
+				<input type="hidden" name="memberID" value="${memberVo.memberID }"/>
 					<table class="table">
 						<tr>
 							<td>제목</td>
@@ -222,7 +230,8 @@
 						<tr>
 							<td>글쓴이</td>
 							<td><input type="text" id="writer" name="writer"
-								class="form-control" /></td>
+								class="form-control" value=${memberVo.memberName } 
+								readonly="readonly"/></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="center">

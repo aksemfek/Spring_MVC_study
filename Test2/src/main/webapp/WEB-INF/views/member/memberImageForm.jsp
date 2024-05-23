@@ -14,7 +14,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
+$(document).ready(function(){
 	
 	if(${!empty msg1}){
 		$("#msgType").attr("class","modal-content panel-warning");
@@ -23,11 +23,12 @@
 });
 </script>
 </head>
+
 <body>
 	<div class="container">
 		<jsp:include page="../include/top.jsp" />
 		<div class="panel panel-default">
-			<div class="panel-heading">사진등록</div>
+			<div class="panel-heading">사진 등록</div>
 			<div class="panel-body">
 				<form action="${root }/memberImageUpdate" method="post"
 					enctype="multipart/form-data">
@@ -45,6 +46,7 @@
 									<input type="file" name="memberProfile" />
 							</span></td>
 						</tr>
+
 						<tr>
 							<td colspan="2"><input type="submit"
 								class="btn btn-primary btn-sm pull-right" value="사진 등록"></td>
@@ -53,7 +55,7 @@
 				</form>
 			</div>
 
-			<!-- 모달 -->
+			<!--모달-->
 			<div class="modal fade" id="failModal" role="dialog">
 				<div class="modal-dialog">
 					<div class="modal-content" id="msgType">
@@ -71,6 +73,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </body>

@@ -20,26 +20,35 @@
 
 			<c:if test="${empty memberVo }">
 				<!-- 회원정보 비어있을 경우 -->
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a class="dropdown-toggle" href="#"
-						data-toggle="dropdown"> 클릭! </a>
-						<ul class="dropdown-menu dropdown-menu-dark">
-							<li><a class="dropdown-item" href="${root }/memberLoginForm">
-							<span class="people"> 로그인 </span></a></li>
-							<li><a class="dropdown-item" href="${root }/memberJoin">회원가입</a></li>
-						</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="${root }/memberLoginForm"> <span
+							class="people"> 로그인 </span>
+					</a></li>
+					<li><a class="dropdown-item" href="${root }/memberJoin">회원가입</a></li>
 				</ul>
 			</c:if>
 
 			<c:if test="${!empty memberVo }">
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a class="dropdown-toggle" href="#"
-						data-toggle="dropdown"> 클릭! </a>
-						<ul class="dropdown-menu dropdown-menu-dark">
-							<li><a class="dropdown-item" href="${root }/memberUpdateForm">회원수정</a></li>
-							<li><a class="dropdown-item" href="${root }/memberImageForm">사진</a></li>
-							<li><a class="dropdown-item" href="${root }/memberLogout">로그아웃</a></li>
-						</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="${root }/memberUpdateForm">회원수정</a></li>
+					<li><a href="${root }/memberImageForm">사진</a></li>
+					<li><a href="${root }/memberLogout">로그아웃</a></li>
+					
+					<c:if test="${!empty memberVo }">
+						<%-- <c:if test="${memberVo.memberProfile eq '' }">
+							<li><img src="${root }/resources/images/bo.jpeg"
+								style="width: 50px; height: 50px;" />${memberVo.memberName }님
+								안녕하세요!</li>
+						</c:if> --%>
+
+						<c:if test="${memberVo.memberProfile ne '' }">
+							<li><img
+								src="${root }/resources/upload/${memberVo.memberProfile}"
+								style="width: 50px; height: 50px;" />${memberVo.memberName }님
+								안녕하세요!</li>
+						</c:if>
+					</c:if>
 				</ul>
 			</c:if>
 		</div>
