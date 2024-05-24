@@ -36,13 +36,13 @@
 					<li><a href="${root }/memberLogout">로그아웃</a></li>
 					
 					<c:if test="${!empty memberVo }">
-						<%-- <c:if test="${memberVo.memberProfile eq '' }">
+						 <c:if test="${empty memberVo.memberProfile }">
 							<li><img src="${root }/resources/images/bo.jpeg"
 								style="width: 50px; height: 50px;" />${memberVo.memberName }님
 								안녕하세요!</li>
-						</c:if> --%>
+						</c:if> 
 
-						<c:if test="${memberVo.memberProfile ne '' }">
+						<c:if test="${!empty memberVo.memberProfile }">
 							<li><img
 								src="${root }/resources/upload/${memberVo.memberProfile}"
 								style="width: 50px; height: 50px;" />${memberVo.memberName }님
