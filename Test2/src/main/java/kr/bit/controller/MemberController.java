@@ -2,11 +2,13 @@ package kr.bit.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +19,7 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.bit.entity.Member;
+import kr.bit.entity.MemberAuth;
 import kr.bit.mapper.MemberMapper;
 
 @Controller
@@ -25,6 +28,9 @@ public class MemberController {
 	@Autowired
 	MemberMapper memberMapper;
 
+	@Autowired
+	PasswordEncoder passwordEncoder;
+	
 	@RequestMapping("/memberJoin")
 	public String memberJoin() {
 		return "member/join";
@@ -47,7 +53,7 @@ public class MemberController {
 
 		if (member.getMemberID().equals("") || memberPw1.equals("") || memberPw2.equals("")
 				|| member.getMemberName().equals("") || member.getMemberGender().equals("")
-				|| member.getMemberEmail().equals("")) {
+				|| member.getMemberEmail().equals("") || member.getAuthLi().size()==0) {
 
 			rttr.addFlashAttribute("msg1", "실패");
 			rttr.addFlashAttribute("msg2", "입력해주세요");
@@ -61,13 +67,34 @@ public class MemberController {
 
 			return "redirect:/memberJoin";
 		}
-
+		
+		String enPw= passwordEncoder.encode(member.getMemberPw());
+		member.setMemberPw(enPw);
+		
 		int result = memberMapper.register(member); // db에 회원정보 삽입
 		member.setMemberProfile("");
 
 		if (result == 1) { // 1행 추가됨-> insert 성공 되면
+			
+			List<MemberAuth> list = member.getAuthLi();
+			for(MemberAuth mem: list) {
+				if(mem.getAuth()!=null) {
+					
+					MemberAuth memberAuth = new MemberAuth();
+					memberAuth.setMemberID(member.getMemberID());
+					memberAuth.setAuth(mem.getAuth());
+					memberMapper.authInsert(memberAuth);
+					
+				}
+			}
+			
 			rttr.addFlashAttribute("msg1", "성공");
 			rttr.addFlashAttribute("msg2", "회원가입에 성공했습니다");
+			
+			/**
+			 * 회원 정보와 권한정보를 DB에 추가해야됨 -> 기존 쿼리문을 변경
+			 */
+			
 
 			session.setAttribute("memberVo", member);
 

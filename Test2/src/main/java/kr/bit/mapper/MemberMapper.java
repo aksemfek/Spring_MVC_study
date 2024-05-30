@@ -4,6 +4,7 @@ package kr.bit.mapper;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.bit.entity.Member;
+import kr.bit.entity.MemberAuth;
 
 @Mapper
 public interface MemberMapper {
@@ -19,4 +20,6 @@ public interface MemberMapper {
 	public Member getMember(String memberID);
 	
 	public void memberProfileUpdate(Member memberVo);
+	
+	public void authInsert(MemberAuth memberAuth);
 }

@@ -1,5 +1,7 @@
 package kr.bit.entity;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
@@ -20,5 +22,7 @@ public class Member {
 	private String memberEmail;
 	
 	private String memberProfile;
+	
+	private List<MemberAuth> authLi;
 
 }
